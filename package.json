@@ -1,26 +1,56 @@
 {
-  "name": "front-service",
+  "name": "front",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "build": "next build",
-    "start:dev": "next dev",
-    "start:prod": "next start",
-    "lint": "next lint"
+    "start:dev": "cross-env NODE_OPTIONS=--max_old_space_size=4096 refine dev",
+    "build": "refine build",
+    "start:prod": "refine start",
+    "lint": "next lint",
+    "refine": "refine",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.14"
+    "@refinedev/cli": "^2.16.21",
+    "@refinedev/core": "^4.47.1",
+    "@refinedev/devtools": "^1.1.32",
+    "@refinedev/nextjs-router": "^6.0.0",
+    "@refinedev/kbar": "^1.3.6",
+    "next": "^14.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@refinedev/nestjs-query": "^1.1.1",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^5.9.1",
+    "@refinedev/mui": "^5.14.4",
+    "@refinedev/react-hook-form": "^4.8.14",
+    "@mui/icons-material": "^5.8.3",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/lab": "^5.0.0-alpha.85",
+    "@mui/material": "^5.8.6",
+    "@mui/x-data-grid": "^6.6.0",
+    "js-cookie": "^3.0.5"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/node": "^18.16.2",
+    "@typescript-eslint/parser": "^6.21.0",
+    "typescript": "^5.4.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
-    "eslint-config-next": "14.2.14"
+    "eslint-config-next": "^14.1.0",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/import-types-preset": "^3.0.0",
+    "@types/js-cookie": "^3.0.6"
+  },
+  "refine": {
+    "projectId": "YOdyfd-qqwJYX-ZJFoVN"
   }
 }
